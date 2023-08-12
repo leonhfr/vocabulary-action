@@ -10,6 +10,8 @@ import (
 	"github.com/leonhfr/vocabulary-action/pkg/vocabulary"
 )
 
+var _ vocabulary.Logger = &logger{}
+
 func Test_newInput(t *testing.T) {
 	l, v, w := "de", "Spaziergang", "/vocabulary"
 

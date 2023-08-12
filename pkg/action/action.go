@@ -21,7 +21,7 @@ func Run(action *githubactions.Action, runner vocabulary.Runner) error {
 		return err
 	}
 
-	output, err := runner.Run(input)
+	output, err := runner.Run(input, newLogger(action), &vocabulary.Filesystem{})
 	if err != nil {
 		return err
 	}
@@ -53,4 +53,24 @@ func newInput(action *githubactions.Action) (vocabulary.Input, error) {
 		Vocabulary: v,
 		Workspace:  c.Workspace,
 	}, nil
+}
+
+type logger struct {
+	action *githubactions.Action
+}
+
+func newLogger(action *githubactions.Action) *logger {
+	return &logger{action}
+}
+
+func (l *logger) Info(msg string, args ...any) {
+	l.action.Infof(msg, args...)
+}
+
+func (l *logger) Warn(msg string, args ...any) {
+	l.action.Warningf(msg, args...)
+}
+
+func (l *logger) Error(msg string, args ...any) {
+	l.action.Errorf(msg, args...)
 }
