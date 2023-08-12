@@ -1,0 +1,30 @@
+linters:
+  enable:
+    - errcheck
+    - gci
+    - godot
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - makezero
+    - prealloc
+    - revive
+    - staticcheck
+    - typecheck
+    - unused
+
+linters-settings:
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/leonhfr/vocabulary-action)
+  govet:
+    enable-all: true
+
+issues:
+  exclude-rules:
+    - path: (.+)_test.go
+      linters:
+        - govet
