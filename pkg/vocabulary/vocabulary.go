@@ -42,10 +42,7 @@ type Runner interface {
 type Handler struct{}
 
 func (Handler) Run(input Input, logger Logger, fh FileHandler) (Output, error) {
-	cfg, err := newConfig(input.Workspace)
-	if err != nil {
-		return Output{}, err
-	}
+	cfg := newConfig(input.Workspace)
 
 	languageDir := cfg.languageDirectory(input.Language)
 	logger.Info(fmt.Sprintf("language \"%s\", target directory \"%s\"", input.Language, languageDir))

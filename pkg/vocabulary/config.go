@@ -24,16 +24,16 @@ func (cfg config) languageDirectory(language string) string {
 	return defaultDirectory
 }
 
-func newConfig(workspace string) (config, error) {
+func newConfig(workspace string) config {
 	viper.AddConfigPath(workspace)
 	viper.SetConfigName(configFile)
 
 	err := viper.ReadInConfig()
 	if err != nil {
-		return config{}, err
+		return config{}
 	}
 
 	languages := viper.GetStringMapString("languages")
 
-	return config(languages), nil
+	return config(languages)
 }

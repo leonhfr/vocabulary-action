@@ -46,7 +46,7 @@ func Test_languageDirectory(t *testing.T) {
 }
 
 func Test_newConfig(t *testing.T) {
-	cfg, err := newConfig("../../test/data")
+	cfg := newConfig("../../test/data")
 	assert.Equal(t, config{
 		"ca":      "catalan/vocabulary",
 		"de":      "german/vocabulary",
@@ -54,5 +54,4 @@ func Test_newConfig(t *testing.T) {
 		"es":      "spanish/vocabulary",
 		"default": "todo/vocabulary",
 	}, cfg)
-	assert.NoError(t, err)
 }
