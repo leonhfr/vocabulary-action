@@ -1,0 +1,6 @@
+languages:
+  ca: catalan/vocabulary
+  de: german/vocabulary
+  en: english/vocabulary
+  es: spanish/vocabulary
+  default: todo/vocabulary
