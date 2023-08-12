@@ -1,0 +1,25 @@
+name: Vocabulary List
+author: Leon Hollender
+description: Create and update lists of vocabulary
+
+inputs:
+  language:
+    description: Language of the vocabulary list
+    required: true
+  vocabulary:
+    description: Vocabulary list, one word per line
+    required: true
+
+runs:
+  using: node16
+  main: invoke-binary.js
+
+outputs:
+  directory:
+    description: The repository directory modified by the action
+  summary:
+    description: Summary of added vocabulary, intended to be used in a commit message
+
+branding:
+  icon: list
+  color: gray-dark

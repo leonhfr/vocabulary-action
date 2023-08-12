@@ -1,2 +1,7 @@
 builds:
   - id: vocabulary
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
