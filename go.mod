@@ -6,6 +6,7 @@ require (
 	github.com/sethvargo/go-githubactions v1.1.0
 	github.com/spf13/viper v1.16.0
 	github.com/stretchr/testify v1.8.4
+	github.com/yuin/goldmark v1.5.5
 )
 
 require (

@@ -4,14 +4,12 @@ import (
 	"github.com/sethvargo/go-githubactions"
 
 	"github.com/leonhfr/vocabulary-action/pkg/action"
-	"github.com/leonhfr/vocabulary-action/pkg/vocabulary"
 )
 
 func main() {
-	a := githubactions.New()
-	h := vocabulary.Handler{}
+	gha := githubactions.New()
 
-	if err := action.Run(a, h); err != nil {
-		a.Fatalf("%v", err)
+	if err := action.Run(gha); err != nil {
+		gha.Fatalf("%v", err)
 	}
 }
