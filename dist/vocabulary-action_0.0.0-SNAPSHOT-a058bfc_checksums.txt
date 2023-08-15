@@ -1,0 +1,2 @@
+ab43fcdec947f56e091a1d4f8b81be2ede7d331c247d01a5420cdcfc59a41830  vocabulary-action_0.0.0-SNAPSHOT-a058bfc_linux_amd64.tar.gz
+e7b0cb9eb326e01b6e585fdb6938170792cd5771bb0c22863dd54723090d15ca  vocabulary-action_0.0.0-SNAPSHOT-a058bfc_linux_arm64.tar.gz
