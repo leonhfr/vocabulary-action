@@ -25,7 +25,7 @@ on:
         type: string
 
 jobs:
-  test:
+  vocabulary:
     runs-on: ubuntu-latest
 
     # permission required for committing to the repository

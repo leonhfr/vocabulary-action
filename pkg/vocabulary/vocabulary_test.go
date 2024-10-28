@@ -45,7 +45,7 @@ func Test_LanguageDirectory(t *testing.T) {
 	}
 }
 
-func Test_parseConfig(t *testing.T) {
+func Test_ParseConfig(t *testing.T) {
 	config := ParseConfig("../../test/data")
 	assert.Equal(t, map[string]string{
 		"ca":      "catalan/vocabulary",

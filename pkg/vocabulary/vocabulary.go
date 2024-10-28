@@ -82,8 +82,8 @@ func Merge(old, new []string) []string {
 	return next
 }
 
-func Upsert(dir, filename string, r rune, vocabulary []string, fh FileHandler) error {
-	contents := fmt.Sprintf("<!-- %s -->\n\n# %c\n\n%s\n", generatedMessage, r, strings.Join(vocabulary, "\n\n"))
+func Upsert(dir, filename string, vocabulary []string, fh FileHandler) error {
+	contents := fmt.Sprintf("<!-- %s -->\n\n%s\n", generatedMessage, strings.Join(vocabulary, "\n\n"))
 	return fh.Write(dir, filename, contents)
 }
 

@@ -75,7 +75,7 @@ func handle(action *gha.Action, workspace, languageDir string, buckets map[rune]
 
 			paragraphs := parser.Parse(existing)
 			merged := vocabulary.Merge(paragraphs, v)
-			err = vocabulary.Upsert(targetDir, filename, r, merged, fh)
+			err = vocabulary.Upsert(targetDir, filename, merged, fh)
 			if err != nil {
 				errs = append(errs, err)
 			}
